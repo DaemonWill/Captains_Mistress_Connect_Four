@@ -10,11 +10,9 @@ var COLUMNS = [
 
 //place first row of pieces to be free for players to use
 var generateInitialPieces = function(){
-  console.log("inside generateInitialPieces");
   for(col = 0; col < 7; col++){
     var newPiece = new Piece(col,0);
     COLUMNS[col].push(newPiece);
-    console.log("column "+col+" newPiece.cart="+newPiece.cartesian);
   }
 };
 
@@ -30,9 +28,7 @@ var mistressPiece = '<img src="../images/mistressImg.png" style="height:90;width
 var botTurn = false;
 
 var injectPiece = function(col,row,playerID){
-  console.log("inside injectPiece");
   var idString = col.toString()+","+row.toString();
-  console.log("idString is: "+idString);
   if(playerID == 1){
     document.getElementById(idString).innerHTML = player1Piece;
   }
