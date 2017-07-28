@@ -1,7 +1,7 @@
 /*
 Player Object used to determine play turn and win conditions
 "comboChains" stores lists of "Piece" nodes that are connected, representing
-the players most viable win options
+the player's most viable win options
 */
 function Player(turnOrder){
   this.id = turnOrder;

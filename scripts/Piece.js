@@ -1,5 +1,5 @@
 /*
-Piece Object used to store pointers to other piece connections depending on
+Piece Object used to store pointers to other piece objects depending on
 which player controls the piece. There're 3 play states piece can be in : 0,1,2
 for free, player1, and player2 respectively. Free pieces are pieces that can
 be assigned next turn that can go to either player.
