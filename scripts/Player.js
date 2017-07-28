@@ -12,4 +12,5 @@ function Player(turnOrder){
     "paths" : [null,null,null,null,null,null,null]
   };
   this.win = false;
+  this.turn = false;
 }

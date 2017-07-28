@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img src="../images/grid.png" id="grid" usemap="#gridMap" style="width:700px; height:700px; z-index:1;position:absolute;top:0px;left:0px;">
+
+<div>
+<map name="gridMap">
+  <area shape="rect" coords="0,0,100,600" name="column1" id="0" href="" onClick="playerListener(0)">
+  <area shape="rect" coords="100,0,200,600" name="column2" id="1" href="" onClick="playerListener(1)">
+  <area shape="rect" coords="200,0,300,600" name="column3" id="2" href="" onClick="playerListener(2)">
+  <area shape="rect" coords="300,0,400,600" name="column4" id="3" href="" onClick="playerListener(3)">
+  <area shape="rect" coords="400,0,500,600" name="column5" id="4" href="" onClick="playerListener(4)">
+  <area shape="rect" coords="500,0,600,600" name="column6" id="5" href="" onClick="playerListener(5)">
+  <area shape="rect" coords="600,0,700,600" name="column7" id="6" href="" onClick="playerListener(6)">
+</map>
+<table style="width:700px;height:600px;z-index:0;position:absolute;top:0px;left:0px;border-spacing:0">
+  <tr style="width:700px;height:100px;">
+    <th id="0,5" style="width:100px"></th>
+    <th id="1,5" style="width:100px"></th>
+    <th id="2,5" style="width:100px"></th>
+    <th id="3,5" style="width:100px"></th>
+    <th id="4,5" style="width:100px"></th>
+    <th id="5,5" style="width:100px"></th>
+    <th id="6,5" style="width:100px"></th>
+  </tr>
+  <tr style="width:700px;height:100px;">
+    <th id="0,4" style="width:100px"></th>
+    <th id="1,4" style="width:100px"></th>
+    <th id="2,4" style="width:100px"></th>
+    <th id="3,4" style="width:100px"></th>
+    <th id="4,4" style="width:100px"></th>
+    <th id="5,4" style="width:100px"></th>
+    <th id="6,4" style="width:100px"></th>
+  </tr>
+  <tr style="width:700px;height:100px;">
+    <th id="0,3" style="width:100px"></th>
+    <th id="1,3" style="width:100px"></th>
+    <th id="2,3" style="width:100px"></th>
+    <th id="3,3" style="width:100px"></th>
+    <th id="4,3" style="width:100px"></th>
+    <th id="5,3" style="width:100px"></th>
+    <th id="6,3" style="width:100px"></th>
+  </tr>
+  <tr style="width:700px;height:100px;">
+    <th id="0,2" style="width:100px"></th>
+    <th id="1,2" style="width:100px"></th>
+    <th id="2,2" style="width:100px"></th>
+    <th id="3,2" style="width:100px"></th>
+    <th id="4,2" style="width:100px"></th>
+    <th id="5,2" style="width:100px"></th>
+    <th id="6,2" style="width:100px"></th>
+  </tr>
+  <tr style="width:700px;height:100px;">
+    <th id="0,1" style="width:100px"></th>
+    <th id="1,1" style="width:100px"></th>
+    <th id="2,1" style="width:100px"></th>
+    <th id="3,1" style="width:100px"></th>
+    <th id="4,1" style="width:100px"></th>
+    <th id="5,1" style="width:100px"></th>
+    <th id="6,1" style="width:100px"></th>
+  </tr>
+  <tr style="width:700px;height:100px;">
+    <th id="0,0" style="width:100px"></th>
+    <th id="1,0" style="width:100px"></th>
+    <th id="2,0" style="width:100px"></th>
+    <th id="3,0" style="width:100px"></th>
+    <th id="4,0" style="width:100px"></th>
+    <th id="5,0" style="width:100px"></th>
+    <th id="6,0" style="width:100px"></th>
+  </tr>
+</div>
+<script src="../scripts/Player.js"></script>
+<script src="../scripts/Piece.js"></script>
+<script src="../scripts/setup.js"></script>
+<script src="../scripts/helpers.js"></script>
+<script src="../scripts/turnLogic.js"></script>
+<script src="../scripts/CaptainsMistress.js"></script>
+</body>
+</html>
