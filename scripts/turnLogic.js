@@ -77,8 +77,8 @@ var checkWinConditions = function(player){
     combo = player.comboChains.chains[0];
     path = player.comboChains.paths[0];
       if(combo.length == 3){
-      //  conclude(); //TODO got to stop game from continuing
           window.alert("game won by player: " + player.id);
+          location.reload();
       }
       //if last piece is connected to an enemy or null, than it's a deadend
       else if(combo.length > 0 && path !== null && combo[combo.length-1][path] === null){
@@ -90,6 +90,7 @@ var checkWinConditions = function(player){
 var updateCombos = function(player,piece){
   var countUp = false;
   var combos = player.comboChains.chains;
+  var comboPaths = player.comboChains.paths;
   var paths = {
     "forw" : ["north","south","east","west","northE","northW","southE","southW"],
     "back" : ["south","north","west","east","southW","southE","northW","northE"]
@@ -99,6 +100,11 @@ var updateCombos = function(player,piece){
     newCombo = comboCheck(newCombo,piece,paths.forw[path],paths.back[path],countUp);
     //insert and organize new combo chain with existing long chains
     combos.push(newCombo);
+    //set desired paths to be navigated through later
+    if(newCombo.length >= 2){
+      comboPaths.unshift(paths.forw[path]);
+      comboPaths.pop();
+    }
     combos.sort(function(a, b){return b.length - a.length});
     if(combos.length > 7){
       combos.pop();

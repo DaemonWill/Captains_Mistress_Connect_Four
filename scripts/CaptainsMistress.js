@@ -1,7 +1,5 @@
 //re-assign the onclick events for the areas within the game map
 var playerListener = function(col){
-//  for(col = 0; col < 7; col++){
-  //  document.getElementById(col.toString()).addEventListener('click', function(event){
       event.preventDefault();
       if(botTurn == false){
         var playedPiece = placePiece(col,currentPlayer);
@@ -12,16 +10,18 @@ var playerListener = function(col){
           updateCombos(currentPlayer,playedPiece);
           injectPiece(x,y,currentPlayer.id);
           checkWinConditions(currentPlayer);
-          if(currentPlayer.id == 1){
+          if(currentPlayer.id == 1 && botGame == false){
             currentPlayer = player2;
           }
-          else{
+          else if(botGame == false){
             currentPlayer = player1;
+          }
+          else{
+            currentPlayer = derpBot;
+            botTurn = true;
+            derpBotMoves(currentPlayer);
           }
         }
       }
-  //  });
-//  }
-};
 
-//playerListener();
+};

@@ -19,6 +19,7 @@ var generateInitialPieces = function(){
 generateInitialPieces();
 var player1 = new Player(1);
 var player2 = new Player(2);
+var derpBot = new Player(2);
 var currentPlayer = player1;
 var player1Piece = '<img src="../images/player1Img.png" style="height:90;width:90"></img>';
 var player2Piece = '<img src="../images/player2Img.png" style="height:90;width:90"></img>';
@@ -26,13 +27,28 @@ var derpPiece = '<img src="../images/derpImg.png" style="height:90;width:90"></i
 var captainPiece = '<img src="../images/captainImg.png" style="height:90;width:90"></img>';
 var mistressPiece = '<img src="../images/mistressImg.png" style="height:90;width:90"></img>';
 var botTurn = false;
+var botGame = true;
+
+//switch who to play against
+var switchPlayer = function(num){
+  if(num == 2){
+    botGame = false;
+
+  }
+  else{
+    botGame = true;
+  }
+}
 
 var injectPiece = function(col,row,playerID){
   var idString = col.toString()+","+row.toString();
   if(playerID == 1){
     document.getElementById(idString).innerHTML = player1Piece;
   }
-  else{
+  else if(playerID == 2 && botGame == false){
     document.getElementById(idString).innerHTML = player2Piece;
+  }
+  else{
+    document.getElementById(idString).innerHTML = derpPiece;
   }
 };

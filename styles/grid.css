@@ -1,0 +1,29 @@
+#grid{
+  width : 700px;
+  height : 700px;
+  z-index : 1;
+  position : absolute;
+  top : 0px;
+  left : 0px;
+}
+table{
+  width : 700px;
+  height : 600px;
+  z-index : 0;
+  position : absolute;
+  top : 0px;
+  left : 0px;
+  text-align : center;
+  border-spacing : 0;
+}
+tr{
+  width : 700px;
+  height : 100px;
+  text-align : cneter;
+}
+th{
+  width : 100px;
+}
+body {
+    background-color: AliceBlue;
+}
